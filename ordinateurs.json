@@ -1,0 +1,48 @@
+{
+  "ordinateurs": [
+    {
+      "id": 1,
+      "modele": "Latitude 3500 - 15.6",
+      "picture": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/15-3500/pdp/notebook-latitude-15-3500-bolt-pdp-gallery-504x350.jpg?fmt=jpg",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 120.88,
+      "prixVente": 300.1,
+      "dateEntreStock": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "modele": "MacBook Pro 15\" i9",
+      "picture": "https://www.laptopspirit.fr/wp-content/uploads/new/2019/08/Macbook-pro-15-2019-face.jpg",
+      "marque": "Apple",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": "2200",
+      "prixVente": "2700",
+      "dateEntreStock": "2020-07-02T09:13:16.217Z"
+    },
+    {
+      "id": 3,
+      "modele": "Imac Pro",
+      "picture": "https://virginmegastore.ma/storage/2020/03/imac-pro-ecran-27-retina-5k-2.jpg",
+      "marque": "Apple",
+      "type": "Fixe",
+      "category": "Bureautique",
+      "prixAchat": "3000",
+      "prixVente": "3500",
+      "dateEntreStock": "2020-07-02T13:10:24.300Z"
+    },
+    {
+      "id": 4,
+      "modele": "HP ProBook 450",
+      "picture": "https://cdn.cnetcontent.com/d8/80/d8802732-389f-48ae-b083-9a5db5643d29.jpg",
+      "marque": "HP",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": "799",
+      "prixVente": "999",
+      "dateEntreStock": "2020-07-02T13:15:10.937Z"
+    }
+  ]
+}

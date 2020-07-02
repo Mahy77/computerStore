@@ -1,0 +1,71 @@
+<h1>Editer un ordinateur</h1>
+
+
+<form #ordinateurForm="ngForm" (ngSubmit)="editOrdinateur()" class="d-flex justify-content-center">
+<div class="form-group col-md-6">
+  
+  <label for="nom">Modèle de l'ordinateur</label>
+  <input type="text" class="form-control" id="model" name="model" required [(ngModel)]="ordinateur.modele" #model="ngModel">
+  <div [hidden]="model.valid"
+       class="alert alert-danger">
+    Nom invalide
+  </div>
+
+  <label for="photo">Photo de l'ordinateur</label>
+  <input type="text" class="form-control" id="photo" name="photo" required [(ngModel)]="ordinateur.picture" #photo="ngModel">
+  <div [hidden]="photo.valid"
+       class="alert alert-danger">
+    Photo invalide
+  </div>
+  <div>
+  <label for="marque">Quelle est marque de l'ordinateur?</label> <br>
+  <div *ngFor="let marque of Marques">
+    <input type="radio" value="{{marque}}" name="{{marque}}" [(ngModel)]="ordinateur.marque" required #marque="ngModel"> {{marque}} <br>
+  </div>
+</div>
+  
+    <br>
+  <label for="sort">Quel est le type de cet ordinateur?</label>
+  <select type="text" class="form-control" id="sort" name="sort" [(ngModel)]="ordinateur.type" #sort="ngModel">
+      <option *ngFor="let type of Types" value="{{type}}">{{type}}</option>
+  </select>
+  <div [hidden]="sort.valid"
+       class="alert alert-danger">
+    Noms invalides
+  </div>
+
+  <div>
+    <label for="category">Quelle est category de l'ordinateur'?</label> <br>
+    <input type="radio" value="Gaming" name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Gaming <br>
+    <input type="radio" value="Bureautique" name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Bureautique <br>
+    <input type="radio" value="Premier prix" name="category" [(ngModel)]="ordinateur.category" required #category="ngModel"> Premier prix <br>
+    </div>
+
+  <label for="prixAchat">Prix d'achat</label>
+  <input type="text" class="form-control" id="prixAchat" name="prixAchat" required [(ngModel)]="ordinateur.prixAchat" #prixAchat="ngModel">
+  <div [hidden]="prixAchat.valid"
+       class="alert alert-danger">
+    Donnée invalide
+  </div>
+
+  
+  <label for="prixVente">Prix de vente</label>
+<input type="text" class="form-control" id="prixVente" name="prixVente" required [(ngModel)]="ordinateur.prixVente" #prixVente="ngModel">
+  <div [hidden]="prixVente.valid"
+       class="alert alert-danger">
+    donnée invalide
+  </div>
+  <label for="dateEntreStock">Date d'entrée en stock</label>
+<input type="date" class="form-control" id="dateEntreStock" name="dateEntreStock" required [(ngModel)]="ordinateur.dateEntreStock" #dateEntreStock="ngModel">
+  <div [hidden]="dateEntreStock.valid"
+       class="alert alert-danger">
+    date invalide
+  </div>
+  <button type="submit" class="btn btn-secondary">Soumettre</button>
+</div>
+  
+</form>
+
+
+
+

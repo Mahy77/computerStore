@@ -1,0 +1,35 @@
+<h1 class="display-2">Tous vos ordinateurs</h1>
+
+<div class="container">
+    <p>Vous avez {{ordinateurs.length}} ordinateurs en stock</p>
+    <a routerLink="/ordinateur/add" class="btn btn-warning m-2">Ajouter un ordinateur</a>
+
+    <div class= "row">
+    
+        <div *ngFor="let ordinateur of ordinateurs" class="col-sm-4" style="width: 200 px;">
+          <div class="card mb-2">
+          <img src="{{ordinateur.picture}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ordinateur.modele}}</h5>
+            <p class="card-text">{{ordinateur.marque}}</p>
+            <p class="card-text">{{ordinateur.type}}</p>
+            <p class="card-text">Achat: {{ordinateur.prixAchat | number: '.2'}} €</p>
+            <p class="card-text">Vente: {{ordinateur.prixVente | number: '.2'}} €</p>
+            <p class="card-text">Rentabilité: {{ordinateur.prixVente - ordinateur.prixAchat | number: '.2'}} €</p>
+            <p class="card-text">Entrée en stock: {{ordinateur.dateEntreStock | date: 'dd/MM/yyyy'}}</p>
+            <a [routerLink]="['/ordinateur', ordinateur.id]" class="btn btn-outline-info">voir le détail</a>
+            <a [routerLink]="['/editordinateur', ordinateur.id]" class="btn btn-outline-success m-2">Editer</a>
+            <a class="btn btn-outline-danger" (click)="openModal(template)">Supprimer</a>
+        <br><br>
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Voulez vous vraiment supprimer cet ordinateur?</p>
+    <button type="button" class="btn btn-outline-primary m-2" (click)="confirm(ordinateur.id)" >Supprimer</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="decline()" >Annuler</button>
+  </div>
+</ng-template>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>

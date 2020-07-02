@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="display-1 mt-5 text-center">{{ordinateur.modele}}</h1>
+    <img src="{{ordinateur.picture}}" class="rounded mx-auto d-block" alt="..." style="width: 600px;">
+    <p class=" display-4">{{ordinateur.marque}}</p>
+    <p class=" display-5">{{ordinateur.type}}</p>
+    <p class=" display-5">{{ordinateur.category}}</p>
+    <p class=" display-5">Prix d'achat: {{ordinateur.prixAchat}} €</p>
+    <p class=" display-5">Prix de vente: {{ordinateur.prixVente}} €</p>
+    <p class=" display-5">Date d'entrée en stock: {{ordinateur.dateEntreStock | date: "dd MM yyyy"}}</p>
+    <a [routerLink]="['/ordinateur']" class="btn btn-secondary w-100">Retour à la liste d'ordinateurs</a>
+</div>
